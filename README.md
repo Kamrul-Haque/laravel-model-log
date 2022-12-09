@@ -1,5 +1,7 @@
 # laravel-model-log
 
+[![Latest Stable Version](http://poser.pugx.org/kamrul-haque/laravel-model-log/v)](https://packagist.org/packages/kamrul-haque/laravel-model-log) [![Total Downloads](http://poser.pugx.org/kamrul-haque/laravel-model-log/downloads)](https://packagist.org/packages/kamrul-haque/laravel-model-log) [![Latest Unstable Version](http://poser.pugx.org/kamrul-haque/laravel-model-log/v/unstable)](https://packagist.org/packages/kamrul-haque/laravel-model-log) [![License](http://poser.pugx.org/kamrul-haque/laravel-model-log/license)](https://packagist.org/packages/kamrul-haque/laravel-model-log) ![GitHub Repo stars](https://img.shields.io/github/stars/Kamrul-Haque/laravel-model-log?color=%23FFC107)
+
 Log model events with data by simply adding a Trait
 
 ## Installation
