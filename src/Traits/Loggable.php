@@ -21,32 +21,29 @@ trait Loggable
      */
     public static function bootLoggable(): void
     {
-        if (auth()->check())
-        {
-            static::created(function ($model) {
-                self::createLog($model, 'Created');
-            });
+        static::created(function ($model) {
+            self::createLog($model, 'Created');
+        });
 
-            static::updated(function ($model) {
-                if (in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses($model)))
-                    if ($model->getRawOriginal('deleted_at'))
-                        self::createLog($model, 'Restored');
-                    else
-                        self::createLog($model, 'Updated');
+        static::updated(function ($model) {
+            if (in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses($model)))
+                if ($model->getRawOriginal('deleted_at'))
+                    self::createLog($model, 'Restored');
                 else
                     self::createLog($model, 'Updated');
-            });
+            else
+                self::createLog($model, 'Updated');
+        });
 
-            static::deleted(function ($model) {
-                if (in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses($model)))
-                    if ($model->isForceDeleting())
-                        self::createLog($model, 'Deleted');
-                    else
-                        self::createLog($model, 'Soft Deleted');
+        static::deleted(function ($model) {
+            if (in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses($model)))
+                if ($model->isForceDeleting())
+                    self::createLog($model, 'Deleted');
                 else
                     self::createLog($model, 'Soft Deleted');
-            });
-        }
+            else
+                self::createLog($model, 'Soft Deleted');
+        });
     }
 
 
