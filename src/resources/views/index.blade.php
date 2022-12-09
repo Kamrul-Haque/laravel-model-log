@@ -16,13 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"></script>
-    <title>Laravel Activity Log</title>
+    <title>Laravel Model Log</title>
 </head>
 <body>
     <div class="container my-4">
         <div class="card shadow border-0">
             <div class="card-body">
-                <h2 class="text-center">Activity Log</h2>
+                <h2 class="text-center">Model Logs</h2>
                 <br>
                 <div class="table-responsive">
                     <table class="table">

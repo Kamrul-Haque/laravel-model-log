@@ -17,7 +17,7 @@ php artisan migrate
 ## Usage
 
 - Add ``KamrulHaque\LaravelModelLog\Traits\Loggable`` *Trait* to the *Model* you want to log
-- Access the logs by ``/model-log`` *uri* added to your application by the package
+- Access the logs by ``/model-logs`` *uri* added to your application by the package
 - To customize the log *view*, publish package views:
 ```
 php artisan vendor:publish --provider="KamrulHaque\LaravelModelLog\ModelLogServiceProvider" --tag="views"

@@ -62,7 +62,7 @@ trait Loggable
         $log = Log::create([
             'loggable_id' => $model->id,
             'loggable_type' => get_class($model),
-            'user_id' => auth()->user()->id,
+            'user_id' => auth()->check() ? auth()->user()->id : null,
             'action' => $activityName
         ]);
         if ($log)
