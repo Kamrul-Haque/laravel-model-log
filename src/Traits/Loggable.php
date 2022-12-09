@@ -65,6 +65,7 @@ trait Loggable
             'user_id' => auth()->check() ? auth()->user()->id : null,
             'action' => $activityName
         ]);
+
         if ($log)
             $log->activity()->create([
                 'before_change' => ($activityName === 'Created') ?: json_encode($model->getRawOriginal()),

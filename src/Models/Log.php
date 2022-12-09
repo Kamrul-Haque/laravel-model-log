@@ -13,15 +13,6 @@ class Log extends Model
     protected $guarded = [];
     protected $with = ['user'];
 
-    public static function boot()
-    {
-        parent::boot();
-
-        static::creating(function ($model) {
-            $model->user_id = auth()->user()->id;
-        });
-    }
-
     public function user(): BelongsTo
     {
         return $this->belongsTo(config('auth.providers.users.model'), 'user_id');

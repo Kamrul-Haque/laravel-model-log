@@ -43,7 +43,7 @@
                                 <td>{{ $log->action }}</td>
                                 <td>{{ $log->loggable_type }}</td>
                                 <td>{{ $log->created_at }}</td>
-                                <td>{{ $log->user->name }}</td>
+                                <td>{{ $log->user_id ? $log->user->name : 'NULL' }}</td>
                                 <td>
                                     <button type="button"
                                             data-toggle="modal"
