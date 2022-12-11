@@ -20,13 +20,13 @@
 </head>
 <body>
     <div class="container my-4">
-        <div class="card shadow border-0">
+        <div class="card">
             <div class="card-body">
                 <h2 class="text-center">Model Logs</h2>
                 <br>
                 <div class="table-responsive">
                     <table class="table">
-                        <thead class="border-top-0">
+                        <thead>
                         <tr>
                             <th>#</th>
                             <th>Action</th>
@@ -109,11 +109,9 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button"
-                                                    class="btn btn-secondary"
-                                                    data-dismiss="modal">Close
-                                            </button>
-                                            <button type="button"
-                                                    class="btn btn-primary">Understood
+                                                    class="btn btn-primary"
+                                                    data-dismiss="modal">
+                                                Close
                                             </button>
                                         </div>
                                     </div>
